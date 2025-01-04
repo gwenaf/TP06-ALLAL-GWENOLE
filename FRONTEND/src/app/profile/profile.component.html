@@ -1,0 +1,32 @@
+<div>
+  <h2>Mon Profil</h2>
+  <p style="color:red">{{ message }}</p>
+
+  <div *ngIf="user; else loginMsg">
+    <form (ngSubmit)="onSubmit()">
+      <p>
+        <label>ID: </label> {{ user.id }}
+      </p>
+      <p>
+        <label>Username: </label> {{ user.username }}
+      </p>
+      <p>
+        <label>Email (obligatoire) :</label>
+        <input [(ngModel)]="user.email" name="email" />
+      </p>
+      <p>
+        <label>Address (optionnel) :</label>
+        <input [(ngModel)]="user.address" name="address" />
+      </p>
+      <p>
+        <label>Phone (optionnel) :</label>
+        <input [(ngModel)]="user.phone" name="phone" />
+      </p>
+      <button type="submit">Mettre à jour</button>
+    </form>
+  </div>
+
+  <ng-template #loginMsg>
+    <p>Vous devez être connecté pour voir votre profil</p>
+  </ng-template>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <h2>Catalogue produits</h2>
+  <p>{{ message }}</p>
+  <ul>
+    <li *ngFor="let p of products">
+      {{ p.name }} - {{ p.price }} €
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <h2>Connexion</h2>
+  <div>{{ message }}</div>
+  <form (ngSubmit)="onSubmit()">
+    <label for="username">Username</label>
+    <input [(ngModel)]="username" id="username" name="username" />
+
+    <label for="password">Password</label>
+    <input [(ngModel)]="password" type="password" id="password" name="password" />
+
+    <button type="submit">Se connecter</button>
+  </form>
+</div>
